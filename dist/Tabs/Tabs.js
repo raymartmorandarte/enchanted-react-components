@@ -146,7 +146,9 @@ const Tabs = (_a) => {
             minHeight: '30px',
         }, TabIndicatorProps: {
             style: indicatorStyle,
-        }, ref: tabsRef })));
+        }, ref: (instance) => {
+            tabsRef.current = instance;
+        } })));
 };
 const defaultProps = {
     centered: false,

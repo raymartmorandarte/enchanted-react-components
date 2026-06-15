@@ -58,7 +58,7 @@ const StyledTabs = styled(MuiTabs)((props) => {
 const Tabs = ({ ...props }: TabsProps) => {
   const [value, setValue] = useState(props.value || 0);
   const [indicatorStyle, setIndicatorStyle] = useState({});
-  const tabsRef = useRef<HTMLDivElement | null>(null);
+  const tabsRef = useRef<HTMLElement | null>(null);
 
   /**
   * This function calculates and updates the style of the tab indicator. It determines the orientation of the tabs,
@@ -125,7 +125,9 @@ const Tabs = ({ ...props }: TabsProps) => {
       TabIndicatorProps={{
         style: indicatorStyle,
       }}
-      ref={tabsRef}
+      ref={(instance) => {
+        tabsRef.current = instance as unknown as HTMLElement | null;
+      }}
     />
   );
 };

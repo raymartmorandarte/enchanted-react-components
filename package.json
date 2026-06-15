@@ -30,6 +30,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "lint": "eslint --ext .ts,.tsx src",
     "lint-fix": "eslint --ext .ts,.tsx --fix src",
     "test-storyshots": "jest --collectCoverage=false --testPathPattern \"__tests__/unit/storyshots-(ltr|rtl).test.ts\"",
