@@ -18,7 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 /* ======================================================================== *
- * Copyright 2024 HCL America Inc.                                    *
+ * Copyright 2026 HCL America Inc.                                          *
  * Licensed under the Apache License, Version 2.0 (the "License");          *
  * you may not use this file except in compliance with the License.         *
  * You may obtain a copy of the License at                                  *
@@ -31,6 +31,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * See the License for the specific language governing permissions and      *
  * limitations under the License.                                           *
  * ======================================================================== */
-const Snackbar_1 = __importDefault(require("./Snackbar"));
-exports.default = Snackbar_1.default;
-__exportStar(require("./Snackbar"), exports);
+const SnackbarGroup_1 = __importDefault(require("./SnackbarGroup"));
+exports.default = SnackbarGroup_1.default;
+__exportStar(require("./SnackbarGroup"), exports);

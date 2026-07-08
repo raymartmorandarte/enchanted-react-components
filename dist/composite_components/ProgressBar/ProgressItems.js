@@ -152,6 +152,11 @@ const StyledList = (0, material_1.styled)(List_1.default)((props) => {
                             },
                         } }),
                 },
+                '& .MuiListItemSecondaryAction-root': {
+                    '.IconButtonMainContainer': {
+                        margin: '0',
+                    },
+                },
                 '&:hover .MuiListItemText-primary, &:hover .MuiListItemText-secondary': {
                     width: 'unset',
                 },

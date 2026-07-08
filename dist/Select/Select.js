@@ -170,23 +170,13 @@ const renderInput = (props, id) => {
     // Also we have to support the option that some stylings will handover via the MenuProps?.PaperProps?.style.
     const defaultStyle = {
         width: props.fullWidth ? '100%' : '240px',
-        // eslint-why - using nested ternary to reduce unnecessary code blocks
-        // eslint-disable-next-line no-nested-ternary
-        marginLeft: props.fullWidth ? '0px' : (theme.direction === theme_1.ThemeDirectionType.RTL ? '8px' : '-8px'),
-        marginTop: '21px',
         padding: '0',
     };
     const paperPropsStyle = ((_b = (_a = selectProps.MenuProps) === null || _a === void 0 ? void 0 : _a.PaperProps) === null || _b === void 0 ? void 0 : _b.style) ? (_d = (_c = selectProps.MenuProps) === null || _c === void 0 ? void 0 : _c.PaperProps) === null || _d === void 0 ? void 0 : _d.style : defaultStyle;
     if (!paperPropsStyle.width) {
         paperPropsStyle.width = defaultStyle.width;
     }
-    if (!paperPropsStyle.marginLeft) {
-        paperPropsStyle.marginLeft = defaultStyle.marginLeft;
-    }
-    if (!paperPropsStyle.marginTop) {
-        paperPropsStyle.marginTop = defaultStyle.marginTop;
-    }
-    return (react_1.default.createElement(Select_1.default, Object.assign({}, selectProps, { "aria-label": typeof props.label === 'string' ? props.label : props.placeholder, labelId: `${props.id}-label`, inputProps: { id: props.id }, MenuProps: Object.assign(Object.assign({}, selectProps.MenuProps), { transformOrigin: { vertical: 'top', horizontal: theme.direction === theme_1.ThemeDirectionType.RTL ? 'right' : 'left' }, anchorOrigin: { vertical: 'top', horizontal: theme.direction === theme_1.ThemeDirectionType.RTL ? 'right' : 'left' }, PaperProps: {
+    return (react_1.default.createElement(Select_1.default, Object.assign({}, selectProps, { "aria-label": typeof props.label === 'string' ? props.label : props.placeholder, labelId: `${props.id}-label`, inputProps: { id: props.id }, MenuProps: Object.assign(Object.assign({}, selectProps.MenuProps), { transformOrigin: { vertical: 'top', horizontal: theme.direction === theme_1.ThemeDirectionType.RTL ? 'right' : 'left' }, anchorOrigin: { vertical: 'bottom', horizontal: theme.direction === theme_1.ThemeDirectionType.RTL ? 'right' : 'left' }, PaperProps: {
                 style: paperPropsStyle,
                 elevation: 2,
                 ref: (node) => {
