@@ -5,15 +5,25 @@
 ### Added
 
 ### Fixed
+- Fixed tooltip cropping in ProgressBar when asset names exceed container width.
 
 ### Changed
 
-### Breaking changes
+### 2.9.1
+
+### Changed
+- Upgraded Storybook from v7.6.3 to v10.4.6.
+- Updated imports from '@storybook/react' to '@storybook/react-webpack5' in multiple component story files.
+- Changed default value summaries in story tables from boolean values to string representations for consistency.
+- Refactored ProgressBar stories to utilize EnumUploadStatus and ProgressItemType for status and type properties.
+- Removed deprecated addons and ensured compatibility with the new Storybook version.
+- Removed internal links from source code.
 
 ## 2.9.0
 
 ### Added
 - Added the `SnackbarGroup` component and its associated tests.
+- Added RTL icon support to the TreeView component and enabled keyboard navigation for hidden icons.
 
 ### Fixed
 - Fixed Select dropdown menu positioning and overlap by anchoring to the bottom of the input field.
